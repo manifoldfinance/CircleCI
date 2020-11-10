@@ -1,8 +1,41 @@
-# Orb Project Template
-<!---
-[![CircleCI Build Status](https://circleci.com/gh/<organization>/<project-name>.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/<organization>/<project-name>) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/<namespace>/<orb-name>)](https://circleci.com/orbs/registry/orb/<namespace>/<orb-name>) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/<organization>/<project-name>/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
+---
+title: Manifold Finance CircleCI Orb
+description: CircleCI Orb 2.1
+version: v.0.1.0
+---
 
---->
+# Manifold CircleCI Orb
+
+[![CircleCI Build Status](https://circleci.com/gh/manifoldfinance/circleci.svg?style=shield)](https://circleci.com/gh/manifoldfinance/circleci) [![CircleCI Orb Version](https://img.shields.io/badge/endpoint.svg?url=https://badges.circleci.io/orb/manifoldfinance/solidityci)](https://circleci.com/orbs/registry/orb/manifoldfinance/solidityci) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/manifoldfinance/circleci/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
+
+
+> Solidity CI Orb
+
+
+### Supported tags and respective `Dockerfile` links
+
+#{range $_, $v := .Versions}
+
+#### #{$v.Version}
+
+`#{range $_, $b := $v.Builds}`
+
+ * `#{$b.Tag}`#{range $_, $t := $b.Base.AdditionalTags}, `#{$t}`#{end} [(#{$b.Base.Base}/Dockerfile)]($URL/#{$b.Base.Base}/Dockerfile)
+#{end}#{end}
+
+## API
+
+Note: unlike `realpath(1)`, these functions take no options; **do not** use `--` to escape any arguments
+
+| Function                          | Description
+| --------------------------------- | -------------
+| <pre>{{ container.Function}} </pre>          | {{ container.Description }}
+| <pre>shell $PATH</pre>  | If `PATH` is a symlink, container `cli`
+| <pre>mount:Volume</pre> | Mount file system to absolute path that `PATH` refers to, resolving any relative directories (`.`, `..`) in `PATH` and any symlinks in `PATH`'s ancestor directories
+
+
+
+
 
 A starter template for orb projects. Build, test, and publish orbs automatically on CircleCI with [Orb-Tools](https://circleci.com/orbs/registry/orb/circleci/orb-tools).
 
